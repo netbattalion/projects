@@ -4,7 +4,7 @@ let data = [
         name: 'index.html',
         template: 'tpl1',
         head: {
-            title: 'Titeeeeel',
+            title: 'Titel 1',
             scripts: [],
             links: ['./styles/tpl1.css'],
         },
@@ -22,6 +22,7 @@ let data = [
         name: 'eins.html',
         template: 'tpl2',
         head: {
+            title: 'Titel 2',
             links: ['./styles/tpl2.css']
         },
         title:'Titel 2',
@@ -33,6 +34,7 @@ let data = [
         name: 'zwei.html',
         template: 'tpl3',
         head: {
+            title: 'Titeeeeel',
             links: ['./styles/tpl3.css']
         },
         titel:'Titel 3',
@@ -48,7 +50,9 @@ let data = [
     return h
 }
 
-, templ = ( v ) => `<h1>${v.t}</h1><p>${v.c}</p>`
+, templ = ( v ) => `
+    <h1>${ v. t }</h1>
+    <p>${ v. c }</p>`
 
 // ------------------- LOOP Function --------------
 
@@ -58,6 +62,7 @@ let data = [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${d.head.title}}</title>
 </head>
 <body>
     <header>
@@ -79,7 +84,7 @@ let data = [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>${d.head.title}}</title>
 </head>
 <body>
     <header></header>
@@ -108,7 +113,7 @@ let data = [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>${d.head.title}}</title>
 </head>
 <body>
     <header>${d.titel}</header>
