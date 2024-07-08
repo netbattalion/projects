@@ -9,7 +9,13 @@ let data = [
             links: ['./styles/tpl1.css'],
         },
         title:'Titel',
-        content: 'Dies ist der Inhalt'
+        content: 'Dies ist der Inhalt',
+        array: [
+            {t: 'Titel 1', c: 'Text 1'},
+            {t: 'Titel 2', c: 'Text 2'},
+            {t: 'Titel 3', c: 'Text 3'},
+            {t: 'Titel 4', c: 'Text 4'},
+        ]
     },
     {
         
@@ -34,6 +40,18 @@ let data = [
     }
 ]
 
+// ------------------- LOOP Function --------------
+
+, each = ( x, f ) => {
+    let h = ''
+    x.forEach( i => h += f( i ) )
+    return h
+}
+
+, templ = ( v ) => `<h1>${v.t}</h1><p>${v.c}</p>`
+
+// ------------------- LOOP Function --------------
+
 , templates = {
     tpl1(d){
         return `
@@ -49,7 +67,10 @@ let data = [
         <h1>${d.title}</h1>
     </nav>
     <main>
-        <p>${d.content}</p>
+        <p>
+        ${ d.content }
+        ${ each( d.array, templ ) }
+        </p>
     </main></body>
 `
     },
