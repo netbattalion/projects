@@ -8,4 +8,4 @@ NEW
 
 ES Modules for Node.js
 
-Render pages with command > Node main.js
+Render pages with command > node main.js
