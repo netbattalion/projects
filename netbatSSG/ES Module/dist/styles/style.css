@@ -1,0 +1,122 @@
+:root {
+    --footer: 50px;
+    --padding: .809rem
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+header {
+    /* Structure */
+    position: fixed;
+    width: 100vw;
+    height: 16vh;
+    z-index: 1;
+    /* Design */
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    max-height: 124px;
+    height: 16.18vh;
+    background-color: #fff;
+
+    >a {
+        margin: 1rem;
+        overflow: hidden;
+    }
+
+    img {
+        height: 100%;
+    }
+}
+
+main {
+    padding-top: 16vh;
+    min-height: calc(100vh - var(--footer));
+    /* background-color: #bfc; */
+
+    h1, h2 {
+        text-align: center;
+    }
+}
+
+footer {
+    /* Structure */
+    position: relative;
+    bottom: 0;
+    width: 100vw;
+    height: var(--footer);
+    
+    /* Design */
+    background: #ddd;
+    display: grid;
+    justify-content: center;
+
+    ul {
+        width: 200px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        list-style-type: none;
+        text-align: center;
+
+        a {
+            line-height: 50px;
+            display: block;
+        }
+    }
+}
+
+#nav {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 100%;
+
+    li {
+        display: grid;
+        align-items: end;
+    }
+
+    a {
+        padding: 16px;
+        line-height: 32px;
+    }
+}
+
+a {
+    display: block;
+    margin: 0;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    background-color: #ddd;
+}
+
+.active {
+    background-color: #ddd
+}
+
+section,
+h1,
+h2,
+h3,
+p {
+    padding: var(--padding);
+}

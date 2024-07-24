@@ -1,13 +1,19 @@
 
 import fs from 'fs'
-import { pages, templates } from './src/data.js'
+import { render, pages, templates } from './src/data.js'
 
-for (let item of pages) {
-    let qwertz = templates[item.template](item)   
+for (let item of render) {
+    item--
+    let folder = pages[item].folder    
+    let qwertz = templates[pages[item].template](pages[item])   
     try {
-    fs.writeFileSync('./dist/' + item .name, qwertz);
+        if (!fs.existsSync('./dist/' + folder) && ''!= './dist/' + folder) {
+        fs.mkdirSync('./dist/' + folder);
+      }
+        console.log(pages[item].template)
+        fs.writeFileSync('./dist/' + folder + '/' + pages[item] .name, qwertz);
     } catch (err) {
-    console.error(err);
+        console.error(err);
     }
     console.log('SUCCESS')
 }
