@@ -15,27 +15,20 @@
         #basket {background-color: #ccc;}
     </style>
     <script>
-        MyOwnObject = {
-            myFetch: async ( e, id ) => {
-                    let html ='',
-                        res = await fetch('https://dummyjson.com/products'),
-                        json = await res.json()
-                    json.products.length = 30
-                    ref.products = json.products
-                },
+        MyGlobalObject = {
             setCounter(me){
                 me.innerHTML='Counter is ' + ref.counter 
             }
         }
     </script>
 </head>
-<body onload="MyOwnObject.myFetch()" data-bind="toggle"
+<body onload="fetch('https://dummyjson.com/products').then(res => res.json()).then(json=>ref.products = json.products)" data-bind="toggle"
     data-set="
         ref.toggle ? me.style.background = 'lightgray' : me.style.background = '#fff'"
-        >
+>
 
     <button onclick="ref.counter = ref.counter + 1">Basic Counter Example</button>
-    <h3 data-bind="counter = 0" data-set="MyOwnObject.setCounter(me)">Counter</h3>
+    <h3 data-bind="counter = 0" data-set="MyGlobalObject.setCounter(me)">Counter</h3>
 
     <div id="store" data-bind="background = '#fff'"
         data-set="me.style.background=ref.background"
@@ -74,15 +67,18 @@
                     ref.toggle ? ref.background = 'gray' : ref.background = '#fff'"
             >Toggle Backgroundcolor
             </button>
-            <input type="text" placeholder="Product Description Search" data-bind="search = 'All Products'"
+            <input type="text" placeholder="Product Description Search"
+                data-bind="search = 'All Products'"
                 oninput="
                     ref.search = this.value.toLowerCase() || 'All Products'
                     ref.products=ref.products"
                 data-set=""
             >
-            <input type="number" placeholder="Search by Price (Max Price)" data-bind="price = 100000"
-                oninput="ref.price = Number(this.value) || 100000
-                ref.products=ref.products"
+            <input type="number" placeholder="Search by Price (Max Price)"
+                data-bind="price = 100000"
+                oninput="
+                    ref.price = Number(this.value) || 100000
+                    ref.products=ref.products"
                 data-set=""
             >
         </div>
@@ -90,7 +86,7 @@
         <div>
             <p>You are searching for: 
                 <b data-bind="search"
-                    data-set="let r = ref.search; me.innerHTML = 'All Products' != r ?'&quot;' +  r + '&quot;' : r"
+                    data-set="let r = ref.search; me.innerHTML = 'All Products' != r ? `&quot;${r}&quot;` : r"
                 >All products</b>
             </p>
             <p>and Price less than: 
@@ -104,11 +100,11 @@
                 >All</b>
             </p>
         </div>
-        <div id="products" data-bind="products"
+        <div id="products"
+            data-bind="products"
             data-set="
                 found = 0
                 let products
-                MyOwnObject.func = (v) => {ref.some.push(v)} 
                 if (ref.products){
                 products ='<h3>List of Products</h3>'
                     for (let i of ref.products ){
@@ -121,7 +117,7 @@
                                 <h3 style='float:right'>${i.price}</h3>
                                 <img src='${i.thumbnail}' width='100'><div>
                                     <p>'${i.description}'</p>
-                                    <button id='${r}' onclick='MyOwnObject.func(${r});ref.some = ref.some'>Add to Shopping Card</button>
+                                    <button id='${r}' onclick='ref.some.push(${r});ref.some = ref.some'>Add to Shopping Card</button>
                                 </div>
                             </div>`
                         }
