@@ -9,11 +9,11 @@ https://www.netbattalion.de
 
 ### I Do
 
-Node/Deno 2.0, Javascript/Typescript, ES Modules, HTML, CSS, REST, JSON, PHP, Golang, Processwire (PHP)
+Node/Deno 2.0, Javascript/Typescript, ES Modules, HTML, CSS, REST, JSON, PHP, Google Firebas, AWS Lambda, AWS Amplyfy, Golang, Processwire (PHP)
 
-Database SQL (MySQL, MariaDB), NoSQL (Google Firebase, Mongo)
+Database SQL (MySQL, MariaDB), NoSQL (Google Firebase, AWS DynamoDB, MongoDB)
 
-Frameworks (Vue/Nuxt, Astro, React, Solid, Svelte, Qwik, Webassembly, Web Components, BabylonJS, , PWA, JQuery
+Frameworks (Vue/Nuxt, Astro, React, Solid, Svelte, Qwik, Webassembly, Web Components, BabylonJS, PWA, JQuery
 
 Ionic/Capacitor, Flutter (Mobile), Tauri (Windows)
 
