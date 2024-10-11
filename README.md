@@ -27,7 +27,7 @@ Just 282 bytes in strict mode and minified!!! (This README is much bigger)
 
 <h3><a href="https://github.com/DaBusch/netbattalion/tree/main/netbatQuery">netbatQuery</a></h3>
 
-A JavaScript library designed to simplify HTML DOM tree traversal and manipulation and event handling like jQuery. Including Javascript module.
+A JavaScript library designed to simplify HTML DOM tree traversal and manipulation and event handling like jQuery. Including ES module.
 
 640 Bytes
 
