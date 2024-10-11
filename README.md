@@ -1,15 +1,15 @@
 # netbattalion
 
-Website
+## Website
 https://www.netbattalion.de
 
 - 3D-Visualisierung
 - Webentwicklung
 - Filmproduktion
 
-### I Do
+## I Do
 
-Node/Deno 2.0, Javascript/Typescript, ES Modules, HTML, CSS, REST, JSON, PHP, Google Firebas, AWS Lambda, AWS Amplyfy, Golang, Processwire (PHP)
+Node/Deno 2.0, Javascript/Typescript, ES Modules, HTML, CSS, REST, JSON, PHP, Google Firebase, AWS Lambda, AWS Amplify, Golang, Processwire (PHP)
 
 Database SQL (MySQL, MariaDB), NoSQL (Google Firebase, AWS DynamoDB, MongoDB)
 
