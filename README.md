@@ -9,13 +9,13 @@ https://www.netbattalion.de
 
 ## I Do
 
-Node/Deno 2.0, Javascript/Typescript, ES Modules, HTML, CSS, REST, JSON, PHP, Google Firebase, AWS Lambda, AWS Amplify, Golang, Processwire (PHP)
+Node/Deno 2.0, Javascript/Typescript, ES Modules, HTML, CSS, REST, JSON, PHP, Google Firebase, AWS Lambda, AWS Amplify, Golang, Processwire (CMS, Headless, PHP)
 
 Database SQL (MySQL, MariaDB), NoSQL (Google Firebase, AWS DynamoDB, MongoDB)
 
 Frameworks (Vue/Nuxt, Astro, React, Solid, Svelte, Qwik, Webassembly, Web Components, BabylonJS, PWA, JQuery
 
-Ionic/Capacitor, Flutter (Mobile), Tauri (Windows)
+Tauri (Windows), Flutter and Ionic/Capacitor (Mobile)
 
 ## Projects
 
@@ -23,7 +23,7 @@ Ionic/Capacitor, Flutter (Mobile), Tauri (Windows)
 
 A minimalistic Javascript reactivity framework to put javascript code into your HTML-dom attributes. Inspired by AlpineJS and HTMX. This may be the tinyest Javascript framework out there.
  
-Just 266 Bytes!!! (This README is much bigger)
+Just 282 bytes in strict mode and minified!!! (This README is much bigger)
 
 <h3><a href="https://github.com/DaBusch/netbattalion/tree/main/netbatQuery">netbatQuery</a></h3>
 
