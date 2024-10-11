@@ -29,7 +29,7 @@ Just 282 bytes in strict mode and minified!!! (This README is much bigger)
 
 A JavaScript library designed to simplify HTML DOM tree traversal and manipulation and event handling like jQuery. Including ES module.
 
-640 Bytes
+640 bytes
 
 <h3><a href="https://github.com/netbattalion/projects/tree/main/netbatRoute">netbatRoute</a></h3>
 
