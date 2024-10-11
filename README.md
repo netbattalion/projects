@@ -7,6 +7,16 @@ https://www.netbattalion.de
 - Webentwicklung
 - Filmproduktion
 
+### I Do
+
+Node/Deno 2.0, Javascript/Typescript, ES Modules, HTML, CSS, REST, JSON, PHP, Golang, Processwire (PHP)
+
+Database SQL (MySQL, MariaDB), NoSQL (Google Firebase, Mongo)
+
+Frameworks (Vue/Nuxt, Astro, React, Solid, Svelte, Qwik, Webassembly, Web Components, BabylonJS, , PWA, JQuery
+
+Ionic/Capacitor, Flutter (Mobile), Tauri (Windows)
+
 ## Projects
 
 <h3><a href="https://github.com/DaBusch/netbattalion/tree/main/netbatJS">netbatJS</a></h3>
